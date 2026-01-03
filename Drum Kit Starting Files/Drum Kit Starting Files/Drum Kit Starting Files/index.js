@@ -1,9 +1,12 @@
 var len=document.querySelectorAll('button').length;
 for(let i=0;i<len;i++){
-    document.querySelectorAll('button')[i].addEventListener('click',handleClick);
+    document.querySelectorAll('button')[i].addEventListener('click',function(){
+    let key = this.innerHTML;
+    sound(key);
+});
 }
-function handleClick(){
-    let btn=this.innerHTML;
+function sound(key){
+    let btn=key;
     switch(btn){
         case 'w':
             let tom1=new Audio('sounds/tom-1.mp3');
@@ -38,5 +41,5 @@ function handleClick(){
 
 }
 document.addEventListener('keydown',function(event){
-    
+    sound(event.key);
 });
