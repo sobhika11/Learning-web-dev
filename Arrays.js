@@ -99,3 +99,12 @@ res=val ?? "default value"
 console.log(res) // 0
 // only null and undefined are considered as nullish
 // unlike || which considers falsy values also like 0,"",false
+
+
+//DOM Formation Process
+// 1.parse html
+// 2.css code to css object model
+// 3.css object model to render tree
+// 4.layout manipulation - create a layout in viewport
+// 5.painting - apply all the colors on the page
+// 5.all 5 combined and displayed as webpage
