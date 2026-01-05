@@ -30,3 +30,13 @@ function greet(){
 }
 
 // hoisting willmake code neat and clear,its also while eventlisteners like add before even created
+
+
+// closure -  It is a function remebers variables from its outer scope 
+
+
+
+//Array Iteration
+const a=[10,20,30,40,50]
+for(let i of a)
+    console.log(i)
