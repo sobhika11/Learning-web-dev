@@ -108,3 +108,10 @@ console.log(res) // 0
 // 4.layout manipulation - create a layout in viewport
 // 5.painting - apply all the colors on the page
 // 5.all 5 combined and displayed as webpage
+
+//Event capturing 
+// 1.capturing phase - from window to target elem   [document-html-body-target elem]
+// 2.target phase - target elem                    
+// 3.bubbling phase - from target elem to window     [target elem-body-html-document]
+// by default eventlisteners are added in bubbling phase , but if we want to add to capturing phase we can pass third param as false(to child) or true (to parents) in addEventListener
+// these 3 phase is called event propagation
