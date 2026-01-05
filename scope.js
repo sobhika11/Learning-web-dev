@@ -11,8 +11,8 @@ function outer(){
 }
 outer()
 
-
-//hoisting - var variables can be used before initialized,it will be moved to top
+// hoisting - trying to use an variable or function before declared is called hoisting
+// - var variables can be used before initialized,it will be moved to top
 //  let and const doesnt work cause -tdz (temporal dead zone) so as these 2 has block scope
 //   it has tdz so cannot beforehoisted,var doesn't goes to tdz
 // tdz -{} the variable time btween {}
@@ -23,6 +23,7 @@ var st="i am hoisted"
 
 
 //function hoisting
+// but this doesnt work for expression func ->const greet=function(){} for this it doesnt work
 greet()
 function greet(){
     console.log("Heyy bud")
