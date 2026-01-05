@@ -53,3 +53,8 @@ function greet(name="Guest"){
 }       
 greet() // Hello Guest
 greet("Sobhi") // Hello Sobhi
+
+// template literals - ``
+let username="Sobhi"
+let message=`Welcome ${username} to the world of JavaScript`
+console.log(message)
