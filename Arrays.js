@@ -35,3 +35,14 @@ const arr3=[...arr1,...arr2]
 console.log(arr3)
 // it is used to copy array or object
 
+
+// rest operator -...
+function sum(...args){
+    let total=0         
+    for(let i of args)
+        total+=i
+    return total
+}
+console.log(sum(1,2,3,4,5))
+// it is used to collect multiple args into array
+// it is used in function parameters only
