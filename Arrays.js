@@ -46,3 +46,10 @@ function sum(...args){
 console.log(sum(1,2,3,4,5))
 // it is used to collect multiple args into array
 // it is used in function parameters only
+
+// default parameters
+function greet(name="Guest"){
+    console.log("Hello "+name)
+}       
+greet() // Hello Guest
+greet("Sobhi") // Hello Sobhi
