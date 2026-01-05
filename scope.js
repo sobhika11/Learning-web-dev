@@ -37,6 +37,10 @@ function greet(){
 
 
 //Array Iteration
-const a=[10,20,30,40,50]
+const a=[1,20,30,40]
 for(let i of a)
     console.log(i)
+
+a.forEach((i)=>{
+    console.log(i)
+})
