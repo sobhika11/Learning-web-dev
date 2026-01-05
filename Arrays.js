@@ -76,3 +76,15 @@ user="ridhu"
 console.log(user)
 console.log(obj1.name)
 // obj1 will not change as it is created with user value "kani"
+
+
+// exports 
+function mul(a,b){
+    return a*b
+}
+export {mul}
+// export default mul
+// only one default export is allowed in a file
+
+// import mul from './Arrays.js'
+// console.log(mul(8,2))
