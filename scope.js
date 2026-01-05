@@ -20,3 +20,10 @@ outer()
 console.log(st)
 var st="i am hoisted"
 // output will be undefined
+
+
+//function hoisting
+greet()
+function greet(){
+    console.log("Heyy bud")
+}
