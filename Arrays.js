@@ -16,7 +16,7 @@ console.log(filteredArray)
 
 // destrucuting -array ,Object
 // array - Any name can be used,and []
-const nme=["sobhi","maddy","kani"]
+const nme=["sobhi","ridhu","kani"]
 const[fi,se] =nme
 console.log(fi)
 
@@ -58,3 +58,21 @@ greet("Sobhi") // Hello Sobhi
 let username="Sobhi"
 let message=`Welcome ${username} to the world of JavaScript`
 console.log(message)
+
+let user="kani"
+const age=20
+const obj1={
+    name:user,
+    age:age     
+}
+console.log(obj)
+// if key and value are same we can write like this
+const obj2={
+    user,
+    age
+}
+console.log(obj1)
+user="ridhu"
+console.log(user)
+console.log(obj1.name)
+// obj1 will not change as it is created with user value "kani"
