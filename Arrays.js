@@ -82,9 +82,20 @@ console.log(obj1.name)
 function mul(a,b){
     return a*b
 }
-export {mul}
+// export {mul}
 // export default mul
 // only one default export is allowed in a file
 
 // import mul from './Arrays.js'
 // console.log(mul(8,2))
+
+
+// Nullish colaesing operator - ??
+let val=null
+let res=val ?? "default value"
+console.log(res) // default value   
+val=0
+res=val ?? "default value"
+console.log(res) // 0
+// only null and undefined are considered as nullish
+// unlike || which considers falsy values also like 0,"",false

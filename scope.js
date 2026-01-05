@@ -1,5 +1,5 @@
-//lexical scope - A function can be called where it is written
 
+//lexical scope - A function can be called where it is written
 const { before } = require("node:test")
 
 function outer(){
@@ -44,3 +44,4 @@ for(let i of a)
 a.forEach((i)=>{
     console.log(i)
 })
+
