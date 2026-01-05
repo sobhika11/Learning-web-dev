@@ -28,3 +28,5 @@ greet()
 function greet(){
     console.log("Heyy bud")
 }
+
+// hoisting willmake code neat and clear,its also while eventlisteners like add before even created
