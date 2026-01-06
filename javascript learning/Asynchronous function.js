@@ -1,3 +1,5 @@
+const { userInfo } = require("os");
+
 console.log(`start`);
 setTimeout(() => {
     console.log("inside timeout");
@@ -29,3 +31,10 @@ console.log(`end`)
 //json 
 // 1.stringify()  //- converts js object to json string
 // 2.parse()      //- converts json string to js object
+
+
+// to store in local storage 4 methods are used
+// 1.localStorage.setItem()   //- to store data in local storage
+// 2.localStorage.getItem()   //- to get data from local storage
+// 3.localStorage.removeItem()//- to remove data from local storage
+// 4.localStorage.clear()     //- to clear all data from local storage  
