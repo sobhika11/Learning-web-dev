@@ -33,8 +33,8 @@ console.log(`end`)
 // 2.parse()      //- converts json string to js object
 
 
-// to store in local storage 4 methods are used
-// 1.localStorage.setItem()   //- to store data in local storage
-// 2.localStorage.getItem()   //- to get data from local storage
-// 3.localStorage.removeItem()//- to remove data from local storage
-// 4.localStorage.clear()     //- to clear all data from local storage  
+// to store in local storage 4 methods are used (array have to be stored in array so multiple data can be stored or else only last submitted data will be stored)
+// 1.localStorage.setItem(key,value)- to store data in local storage
+// 2.localStorage.getItem(key)      - to get data from local storage
+// 3.localStorage.removeItem(key)   - to remove data from local storage
+// 4.localStorage.clear()           - to clear all data from local storage  
