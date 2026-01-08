@@ -1,11 +1,13 @@
 import React from 'react'
 import Header from './Header.jsx'
+import Entry from './Entry.jsx'
 const App = () => {
   return (
     <>
-    <Header />
+      <Header />
+      <Entry />
     </>
   )
 }
 
-export default App;
+export default App
