@@ -1,0 +1,24 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+header>img{
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
+}
+header>h1{
+  font-size: 14.46px;
+  font-weight:500;
+  font-family: 'Inter', sans-serif;
+
+}
