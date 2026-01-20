@@ -1,16 +1,11 @@
 import React from 'react'
-import jokesData from './jokesData'
-import './App.css'
-const entries = jokesData.map((joke) => {
-  return <h2>{joke.setup}<br></br>
-  {joke.punchline}</h2>
-})
-const App = () => {
+import './index.css'
+import Toggle from './Toggle.jsx'
+export const App = () => {
   return (
-    <>
-    {entries}
-    </>
+    <div>
+      <Toggle/>
+
+    </div>
   )
 }
-
-export default App
