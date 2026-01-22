@@ -1,10 +1,9 @@
 import React from 'react'
-import './index.css'
-import Toggle from './Toggle.jsx'
+import Object from './Objects.jsx'
 export const App = () => {
   return (
     <div>
-      <Toggle/>
+      <Object/>
 
     </div>
   )
