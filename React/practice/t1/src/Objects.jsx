@@ -3,28 +3,32 @@ import avatar from "../public/images/user.png"
 import starFilled from "../public/images/star-filled.png"
 import starEmpty from "../public/images/star-empty.png"
 export default function Object() {
-     const [contact, setContact] = React.useState({
+    const [contact, setContact] = React.useState({
         firstName: "John",
         lastName: "Doe",
         phone: "+1 (212) 555-1212",
         email: "itsmyrealname@example.com",
-        isFavorite: false
+        isFavorite: true
     })
-    /**
-     * Challenge: Use a ternary to determine which star image variable
-     * should be used based on the `contact.isFavorite` property. Test 
-     * your results by manually changing the isFavorite value in state.
-     * 
-     * `true` => starFilled
-     * `false` => starEmpty
-     */
-
+    
     let starIcon = contact.isFavorite ? starFilled : starEmpty
-    console.log(starIcon)
 
     function toggleFavorite() {
-        console.log("Toggle Favorite")
+        setContact(prev=>{
+            return{
+                ...prev,isFavorite:!prev.isFavorite
+            }
+        })
     }
+    
+    /**
+     * Challenge:
+     * Update the following:
+     * - aria-pressed should reflect the same value as contact.isFavorite.
+     * - aria-label should switch to say "Remove from favorites" if
+     *   contact.isFavorite is `true`.
+     * - img alt should say "filled star icon" when it is filled.
+     */
 
     return (
         <main>
@@ -42,7 +46,7 @@ export default function Object() {
                         className="favorite-button"
                     >
                         <img
-                            src={starEmpty}
+                            src={starIcon}
                             alt="empty star icon"
                             className="favorite"
                         />
