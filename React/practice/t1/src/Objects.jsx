@@ -3,7 +3,7 @@ import avatar from "../public/images/user.png"
 import starFilled from "../public/images/star-filled.png"
 import starEmpty from "../public/images/star-empty.png"
 export default function Object() {
-    const [contact, setContact] = React.useState({
+     const [contact, setContact] = React.useState({
         firstName: "John",
         lastName: "Doe",
         phone: "+1 (212) 555-1212",
@@ -11,10 +11,16 @@ export default function Object() {
         isFavorite: false
     })
     /**
-     * Challenge: Fill in the values in the markup
-     * using the properties of our state object above
-     * (Ignore `isFavorite` for now)
+     * Challenge: Use a ternary to determine which star image variable
+     * should be used based on the `contact.isFavorite` property. Test 
+     * your results by manually changing the isFavorite value in state.
+     * 
+     * `true` => starFilled
+     * `false` => starEmpty
      */
+
+    let starIcon = contact.isFavorite ? starFilled : starEmpty
+    console.log(starIcon)
 
     function toggleFavorite() {
         console.log("Toggle Favorite")
@@ -32,6 +38,7 @@ export default function Object() {
                     <button
                         onClick={toggleFavorite}
                         aria-pressed={false}
+                        aria-label="Add to favorites"
                         className="favorite-button"
                     >
                         <img
@@ -41,10 +48,10 @@ export default function Object() {
                         />
                     </button>
                     <h2 className="name">
-                        John Doe
+                        {contact.firstName} {contact.lastName}
                     </h2>
-                    <p className="contact">+1 (212) 555-1212</p>
-                    <p className="contact">itsmyrealname@example.com</p>
+                    <p className="contact">{contact.phone}</p>
+                    <p className="contact">{contact.email}</p>
                 </div>
 
             </article>
