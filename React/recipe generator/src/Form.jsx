@@ -47,7 +47,7 @@ export default function Form() {
                         <h3>Ready for a recipe?</h3>
                         <p>Generate a recipe from your list of ingredients.</p>
                     </div>
-                    <button onClick={handleClick}>{!recipeShown?"Get a recipe":" You're recipe"}</button>
+                    <button onClick={handleClick}>Get a recipe</button>
                 </div>}
             </section>}
             {recipeShown && <section>
