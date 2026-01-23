@@ -1,11 +1,19 @@
-import React from 'react'
-// import Object from './Objects.jsx'
-import Index from './Index.jsx'
-export const App = () => {
-  return (
-    <div>
-      <Index/>
+import Joke from "./Joke"
+import jokesData from "./jokesData"
 
-    </div>
-  )
+export default function App() {
+    const jokeElements = jokesData.map(joke => {
+        return (
+            <Joke 
+                key={joke.id}
+                setup={joke.setup} 
+                punchline={joke.punchline} 
+            />
+        )
+    })
+    return (
+        <div>
+            {jokeElements}
+        </div>
+    )
 }
