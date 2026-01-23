@@ -15,7 +15,9 @@ export default function Joke(props) {
             
             {props.setup && <h3>{props.setup}</h3>}
             <p>{ shown && props.punchline}</p>
-            <button onClick={handleSubmit}>Show Punchline</button>
+            {!shown && <button onClick={handleSubmit}>Show Punchline</button>}
+            {shown && <button onClick={handleSubmit}>Hide Punchline</button>}
+
             <hr />
         </div>
     )
