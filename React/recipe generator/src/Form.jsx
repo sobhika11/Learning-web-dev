@@ -1,27 +1,25 @@
 import { useState } from "react"
-
+import React from "react"
 export default function Form() {
-    const [ingredients, setIngredients] = useState([
-        "Chicken",
-        "Oninon",
-        "Tomatoes"
-    ])
+     const [ingredients, setIngredients] = React.useState([])
 
     const ingredientsListItems = ingredients.map(ingredient => (
         <li key={ingredient}>{ingredient}</li>
     ))
+    
+    /**
+     * Challenge: use form action instead of onSubmit to
+     * handle the data from the form
+     */
 
-    function handleSubmit(event) {
-        event.preventDefault()
-        const formData = new FormData(event.currentTarget)
+    function handleSubmit(formData) {
         const newIngredient = formData.get("ingredient")
-        setIngredients(prev => [...prev, newIngredient])
-        event.currentTarget.reset()
+        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
     }
 
     return (
         <main>
-            <form onSubmit={handleSubmit} className="add-ingredient-form">
+            <form action={handleSubmit} className="add-ingredient-form">
                 <input
                     type="text"
                     placeholder="e.g. oregano"
