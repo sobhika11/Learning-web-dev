@@ -1,5 +1,6 @@
 import Joke from "./Joke"
 import jokesData from "./jokesData"
+import ComponentState from "./ComponentState"
 
 export default function App() {
     const jokeElements = jokesData.map(joke => {
@@ -13,7 +14,9 @@ export default function App() {
     })
     return (
         <div>
-            {jokeElements}
+            {/* {jokeElements} */}
+            <ComponentState/>
+            
         </div>
     )
 }
