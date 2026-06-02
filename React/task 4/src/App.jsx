@@ -1,6 +1,7 @@
 // import React from 'react'
 import { FacilityCounter } from './FacilityCounter'
 import Securitybadge from './Securitybadge'
+import { SecurityAlert } from './SecurityAlert'
 import './App.css'
 const App = () => {
   return (
@@ -11,6 +12,8 @@ const App = () => {
     <Securitybadge name="Alice" role="Network Analyst" sec="Level 1" />
     <Securitybadge name="Bob" role="Database Admin" sec="Level 5 (Top Secret)" />
     
+
+     <SecurityAlert/>
    </div>
    <FacilityCounter/>
    </div>
