@@ -12,9 +12,8 @@ const App = () => {
     <Securitybadge name="Alice" role="Network Analyst" sec="Level 1" />
     <Securitybadge name="Bob" role="Database Admin" sec="Level 5 (Top Secret)" />
     
-
-     <SecurityAlert/>
    </div>
+    <SecurityAlert/>
    <FacilityCounter/>
    </div>
   )

@@ -1,7 +1,10 @@
 * {
     box-sizing: border-box;
 }
-
+.button{
+    display: block;
+    gap:10px;
+}
 body {
     margin: 0;
     font-family: Inter, sans-serif;
