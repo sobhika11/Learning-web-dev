@@ -1,4 +1,9 @@
 import React from 'react'
+import CounterFun from './CounterFun'
+
+const Count = ({ number }) => {
+    return <h2 className="count">{number}</h2>
+}
 
 const ComponentState = () => {
   const [count, setCount] = React.useState(0)
@@ -33,10 +38,7 @@ const ComponentState = () => {
                     onClick={subtract}
                     aria-label="Decrease count"
                 >-</button>
-
-                <h2 className="count">{count}</h2>
-
-
+                <CounterFun num = {count} />
                 <button
                     className="plus"
                     onClick={add}

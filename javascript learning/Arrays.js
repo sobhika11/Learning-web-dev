@@ -1,6 +1,8 @@
 const a=[10,20,30,40]
 for(let i of a)
     console.log(i)
+//in-indexes
+// of-values
 
 //functions
 // 1.map - this maps the old array elem to given condition and returns new array
@@ -103,7 +105,7 @@ console.log(res) // 0
 
 //DOM Formation Process
 // 1.parse html
-// 2.css code to css object model
+// 2.css code to css object model(CSSOM)
 // 3.css object model to render tree
 // 4.layout manipulation - create a layout in viewport
 // 5.painting - apply all the colors on the page

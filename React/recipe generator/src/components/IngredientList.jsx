@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ClaudeRecipe = (props) => {
+const IngredientList = (props) => {
     const ingredientsListItems = props.ingredients.map(ingredient => (
         <li key={ingredient}>{ingredient}</li>
     ))
@@ -14,10 +14,10 @@ const ClaudeRecipe = (props) => {
                         <h3>Ready for a recipe?</h3>
                         <p>Generate a recipe from your list of ingredients.</p>
                     </div>
-                    <button onClick={props.toggleRecipe}>Get a recipe</button>
+                    <button onClick={props.handleGetRecipe}>Get a recipe</button>
                 </div>}
             </section>  
   )
 }
 
-export default ClaudeRecipe
+export default IngredientList

@@ -38,3 +38,5 @@ console.log(`end`)
 // 2.localStorage.getItem(key)      - to get data from local storage
 // 3.localStorage.removeItem(key)   - to remove data from local storage
 // 4.localStorage.clear()           - to clear all data from local storage  
+
+

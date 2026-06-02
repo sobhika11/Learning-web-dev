@@ -1,110 +1,57 @@
 import React from "react"
+import avatar from "./images/user.png"
+// import starFilled from "./images/star-filled.png"
+// import starEmpty from "./images/star-empty.png"
+import Starcomponent from "./Starcomponent.jsx"
 
-function Index() {
+export default function Index() {
+    const [contact, setContact] = React.useState({
+        firstName: "John",
+        lastName: "Doe",
+        phone: "+1 (212) 555-1212",
+        email: "itsmyrealname@example.com",
+        isFavorite: false
+    })
+    
+    // let starIcon = contact.isFavorite ? starFilled : starEmpty
 
-  function signUp(formData) {
-    // const email = formData.get("email")
-    // const password = formData.get("password")
-    // const employmentStatus = formData.get("employmentStatus")
-    // const dietaryRestrictions = formData.getAll("dietaryRestrictions")
-    // const favColor = formData.get("favColor")
-    console.log(Object.fromEntries(formData))
+    function toggleFavorite() {
+        setContact(prevContact => ({
+            ...prevContact,
+            isFavorite: !prevContact.isFavorite
+        }))
+    }
+    
+    /**
+     * Challenge: Move the star image into its own component (Star)
+     * - It should receive a prop called `isFilled` that it
+     *   uses to determine which icon it will display. (You'll
+     *   need to import the 2 star icons into that new component first).
+     * - Import and render that component, passing the value of
+     *   `isFavorite` to the new `isFilled` prop.
+     * - Don't worry about the abiliity to flip this value quite yet.
+     *   Instead, you can test if it's working by manually changing
+     *   `isFavorite` in state above.
+     */
 
-  }
+    return (
+        <main>
+            <article className="card">
+                <img
+                    src={avatar}
+                    className="avatar"
+                    alt="User profile picture of John Doe"
+                />
+                <div className="info">
+                    <Starcomponent isFilled={contact.isFilled}  handleClick={toggleFavorite}/>
+                    <h2 className="name">
+                        {contact.firstName} {contact.lastName}
+                    </h2>
+                    <p className="contact">{contact.phone}</p>
+                    <p className="contact">{contact.email}</p>
+                </div>
 
-  return (
-    <section>
-      <h1>Signup form</h1>
-
-      <form action={signUp}>
-
-        <label htmlFor="email">Email:</label>
-        <input
-          id="email"
-          defaultValue="joe@schmoe.com"
-          type="email"
-          name="email"
-        />
-
-        <label htmlFor="password">Password:</label>
-        <input
-          id="password"
-          defaultValue="password123"
-          type="password"
-          name="password"
-        />
-
-        <label htmlFor="description">Description:</label>
-        <textarea
-          id="description"
-          name="description"
-          defaultValue="This is a description"
-        />
-
-        <fieldset>
-          <legend>Employment Status:</legend>
-
-          <label>
-            <input type="radio" name="employmentStatus" value="unemployed" />
-            Unemployed
-          </label>
-
-          <label>
-            <input type="radio" name="employmentStatus" value="part-time" />
-            Part-time
-          </label>
-
-          <label>
-            <input
-              type="radio"
-              name="employmentStatus"
-              defaultChecked
-              value="full-time"
-            />
-            Full-time
-          </label>
-        </fieldset>
-
-        <fieldset>
-          <legend>Dietary restrictions:</legend>
-
-          <label>
-            <input type="checkbox" name="dietaryRestrictions" value="kosher" />
-            Kosher
-          </label>
-
-          <label>
-            <input type="checkbox" name="dietaryRestrictions" value="vegan" />
-            Vegan
-          </label>
-
-          <label>
-            <input
-              type="checkbox"
-              name="dietaryRestrictions"
-              defaultChecked
-              value="gluten-free"
-            />
-            Gluten-free
-          </label>
-        </fieldset>
-
-        <label htmlFor="favColor">What is your favorite color?</label>
-        <select id="favColor" name="favColor" defaultValue="" required>
-          <option value="" disabled>-- Choose a color --</option>
-          <option value="red">Red</option>
-          <option value="orange">Orange</option>
-          <option value="yellow">Yellow</option>
-          <option value="green">Green</option>
-          <option value="blue">Blue</option>
-          <option value="indigo">Indigo</option>
-          <option value="violet">Violet</option>
-        </select>
-
-        <button>Submit</button>
-      </form>
-    </section>
-  )
+            </article>
+        </main>
+    )
 }
-
-export default Index
