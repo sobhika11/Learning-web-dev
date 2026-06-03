@@ -2,6 +2,7 @@
 import { FacilityCounter } from './FacilityCounter'
 import Securitybadge from './Securitybadge'
 import { SecurityAlert } from './SecurityAlert'
+import { Staterender } from './Staterender'
 import './App.css'
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
    </div>
     <SecurityAlert/>
    <FacilityCounter/>
+   <Staterender/>
    </div>
   )
 }
