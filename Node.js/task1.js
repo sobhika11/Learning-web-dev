@@ -3,7 +3,7 @@ const app=express();
 port=3000;
 app.use(express.json());
 const employeesData = [
-  { id: 101, name: "Alice Vance", role: "Network Engineer" },
+  { id: 101, name: "Alice", role: "Network Engineer" },
   { id: 102, name: "Bob Miller", role: "Security Guard" },
   { id: 103, name: "Charlie Cox", role: "Database Admin" }
 ];
@@ -14,11 +14,6 @@ app.post('/',(req,res)=>{
     else    
         return res.send("Not successful");
 })
-app.get('/',(req,res)=>{
-    console.log("hello");
-    res.json({message:"hello"});
-})
-
 app.get('/employee',(req,res)=>{
     const{id}=req.body;
     const numericLevel = parseInt(level, 10);
