@@ -9,13 +9,10 @@ const Proptypes = ({name,age}) => {
     })
     const [names, setName] = useState("");
 
-
-
 <h1>{name}</h1>
   return (
    <>
         <div>
-
             <h1>Hello I'm {name} </h1>
             <h2>{age}</h2>
             <h3>{items}</h3>
