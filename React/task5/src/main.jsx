@@ -7,17 +7,15 @@ import PropTypes from 'prop-types';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-
-    <Link to="/" >Home</Link>
-    <Link to = "/about">About</Link>
+    <App/>
+    {/* <BrowserRouter>
     
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={< PropTypes/>} />
     </Routes>
-    
-    </BrowserRouter>
+     */}
+    {/* </BrowserRouter> */}
     
   </StrictMode>,
 )
